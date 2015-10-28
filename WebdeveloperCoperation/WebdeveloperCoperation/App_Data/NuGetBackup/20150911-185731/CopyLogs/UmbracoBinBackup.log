@@ -1,0 +1,26 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 11. september 2015 18:57:31
+   Source : c:\users\nesuarg\documents\visual studio 2013\Projects\WebdeveloperCoperation\WebdeveloperCoperation\bin\
+     Dest : c:\users\nesuarg\documents\visual studio 2013\Projects\WebdeveloperCoperation\WebdeveloperCoperation\App_Data\NuGetBackup\20150911-185731\bin\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	c:\users\nesuarg\documents\visual studio 2013\Projects\WebdeveloperCoperation\WebdeveloperCoperation\bin\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         0         0         0         0
+   Files :         0         0         0         0         0         0
+   Bytes :         0         0         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : 11. september 2015 18:57:31
+

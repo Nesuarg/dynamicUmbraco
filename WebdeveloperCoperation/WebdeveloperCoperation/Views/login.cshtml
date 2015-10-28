@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+
+    @foreach(var page in Model.Content.Children.Where(x => x.IsVisible())){
+        <div>
+            @Html.Partial("login", page)
+        </div>
+    }

@@ -1,0 +1,63 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+	
+@*
+    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
+    This is the home page for a standard website.
+    It also highlights the current active page/section in the navigation with the css class "current".
+*@
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Web Development Coperation</a>
+            </div>
+					@{ var selection = CurrentPage.Site().Children.Where("Visible"); }
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    @foreach (var item in selection)
+					{
+						<li class="@(item.IsAncestorOrSelf(CurrentPage) ? "current" : null)">
+							<a href="@item.Url">@item.Name</a>
+						</li>
+					}
+                </ul>
+                @if (User.Identity.IsAuthenticated)
+                {
+
+                    @Umbraco.RenderMacro("loginStatus")
+
+
+                }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-right">
+
+
+
+
+                        <!--@Html.ActionLink("sign in","login-page") // NO WORKARINO?! //-->
+                        <li><a href="login-page">Sign in</a></li>
+
+
+
+
+
+
+
+                    </ul>
+                }
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
