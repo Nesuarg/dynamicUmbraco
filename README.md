@@ -1,0 +1,2 @@
+# dynamicUmbraco
+Dynamic umbraco, Razor 
