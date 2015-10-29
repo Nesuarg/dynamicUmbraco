@@ -4,38 +4,36 @@
 }
 
 <!-- Page Heading -->
-        <div class="row">
-			<div id="main-container" class="container"
-            <div class="col-lg-12">
-                <h1> @Umbraco.Field("pageName") </h1>
-            </div>
-		</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1> @Umbraco.Field("pageName") </h1>
+            <hr>
         </div>
+    </div>
+</div>
+            @{
+            var selection = CurrentPage.Site().FirstChild("ArticlesMain").Children("ArticlesItem").Where("Visible").OrderBy("CreateDate desc");
+            }
+            <!-- Project One -->
+            @foreach(var item in selection){
+<div class="container">
+    <div class="row">
+        <div class=" col-md-7">
+            <a href="@item.Url">
+                <img class="img-responsive" src="http://placehold.it/700x300" alt="@item.Name">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>@item.Name</h3>
+            <p>bit of the text</p>
+            <a class="btn btn-primary" href="@item.Url">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    </div>
+</div>            
+            <br>
+        
         <!-- /.row -->								
-@{
-	var selection = CurrentPage.Site().FirstChild("ArticlesMain").Children("ArticlesItem").Where("Visible").OrderBy("CreateDate desc");
-}
 
-	
-	
-	        <!-- Project One -->
-	@foreach(var item in selection){
-        <div class="row">
-			<div class="container">
-            <div class=" col-md-7">
-                <a href="@item.Url">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="@item.Name">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>@item.Name</h3>
-                <p>bit of the text</p> 
-                <a class="btn btn-primary" href="@item.Url">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-				</div>	
-        </div>
-					<br>
 					}
         <!-- /.row -->
-
-        <hr>

@@ -26,17 +26,27 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-@Umbraco.RenderMacro("Navigation")
-	
 
-@RenderBody()			
-	
+    <div id="wrapper">
+        <!-- Navigation -->
+        @Umbraco.RenderMacro("Navigation")
 
-<div id="main-container" class="container">
-@CurrentPage.GetGridHtml("gridField", "Bootstrap3")
-	
-</div>
+
+        
+
+
+        <div id="main-container">
+            @RenderBody()
+        </div>
+    </div>
+        <div id="footer-container">
+            <div class="container">
+                <div class="row">
+                    <p class="footertext">@Umbraco.Field("footerText")</p>
+                </div>
+            </div>
+        </div>
+ 
 			
 			<!-- Bootstrap / jquery -->
 	
