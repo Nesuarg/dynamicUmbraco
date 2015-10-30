@@ -11,6 +11,10 @@ body,html {    width: 100%;    height: 100%;	}body,h1,h2,h3,h4,h5,h6 {    font-f
     padding-bottom:120px;
 }
 
+.intro-header {
+    background-color:#77C0CE;
+}
+
 .navbar-inverse .navbar-brand {
     color:#EDF2F8;
 }
@@ -19,7 +23,7 @@ body,html {    width: 100%;    height: 100%;	}body,h1,h2,h3,h4,h5,h6 {    font-f
     color:#EDF2F8;
 }
 .navbar-fixed-top {
-    background-color:#004251;
+    background-color:#527C91;
 }
 
 .navbar-collapse {
@@ -42,7 +46,7 @@ body,html {    width: 100%;    height: 100%;	}body,h1,h2,h3,h4,h5,h6 {    font-f
 
 #footer-container {
     height:100px;
-    background-color:#004251;
+    background-color:#527C91;
     color: #f8f8f8;
 }
 

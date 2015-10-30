@@ -14,7 +14,7 @@
 </div>
             @{
             var selection = CurrentPage.Site().FirstChild("ArticlesMain").Children("ArticlesItem").Where("Visible").OrderBy("CreateDate desc");
-            }
+			}
             <!-- Project One -->
             @foreach(var item in selection){
 <div class="container">
@@ -26,7 +26,7 @@
         </div>
         <div class="col-md-5">
             <h3>@item.Name</h3>
-            <p>bit of the text</p>
+            <p>@Umbraco.Truncate(@item.articleContent, 122)</p>
             <a class="btn btn-primary" href="@item.Url">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
     </div>
@@ -37,3 +37,6 @@
 
 					}
         <!-- /.row -->
+			
+			
+			

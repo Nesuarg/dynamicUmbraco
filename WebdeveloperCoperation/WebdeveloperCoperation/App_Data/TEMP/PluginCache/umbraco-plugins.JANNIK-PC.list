@@ -293,4 +293,7 @@
     <add type="Umbraco.Web.Cache.UserPermissionsCacheRefresher, umbraco, Version=1.0.5750.18164, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Cache.UserTypeCacheRefresher, umbraco, Version=1.0.5750.18164, Culture=neutral, PublicKeyToken=null" />
   </baseType>
+  <baseType type="Umbraco.Core.Macros.XsltExtensionAttribute" resolutionType="FindAttributedTypes">
+    <add type="UmbracoExamine.XsltExtensions, UmbracoExamine, Version=0.7.0.18162, Culture=neutral, PublicKeyToken=null" />
+  </baseType>
 </plugins>
