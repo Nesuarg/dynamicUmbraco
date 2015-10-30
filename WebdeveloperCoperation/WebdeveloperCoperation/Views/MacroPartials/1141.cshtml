@@ -30,13 +30,14 @@
 
 @if (loginStatusModel.IsLoggedIn)
 {
-    <p class="navbar-text navbar-right">@loginStatusModel.Name</p>
+    <p>You are currently logged in as @loginStatusModel.Name</p>
 
     using (Html.BeginUmbracoForm<UmbLoginStatusController>("HandleLogout"))
     {
-
-             <button class="btn-link">Logout</button>
-
+         <fieldset>
+             <legend>Logout</legend>
+             <button>Logout</button>
+         </fieldset>
     
         @Html.HiddenFor(m => logoutModel.RedirectUrl)
     }
